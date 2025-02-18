@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image and Link</title>
 </head>
+
 <body>
+    <!--
+        BASİTÇE LİNK EKLEMEK :
+        - target="_blank" linkin yeni sekmede açılmasını sağlar
+     -->
     <h1>Hello, I'm Elif.</h1>
     <p>I like to drawing and here is my Pinterest profile:</p>
-    <a href="https://tr.pinterest.com/elsehar/?actingBusinessId=760404855742356508" target="_blank">Pinterest</a>
+    <a href="https://tr.pinterest.com/elsehar/?actingBusinessId=760404855742356508"
+        target="_blank">Pinterest</a><br><br>
+
+
+
+    <!--
+       GÖRSELE LİNK EKLEMEK :
+       - öncelikle bir link etiketi (<a></a>) açılır ve içerisine img etiketi açılır.
+     -->
+    <em><b>Here is my Pinterest: </b></em><a href="https://tr.pinterest.com/elsehar/">
+        <img src="images/pinterest_logo.png" alt="pinterest of elsehar" width="25"></a><br><br>
+
+
+
+    <!--
+        ANA DİZİNDEKİ BAŞKA BİR WEB SAYFASINA YÖNLENDİRME :
+        - link etiketi (<a></a>) açılır ve ana dizinden hedef dosyanın konumu href olarak verilir.
+     -->
+    <h3>Visit My New Website</h3>
+    <a href="other_files/yeni_web.html">Yeni web sayfami ziyaret et</a><br><br>
+
+
+
+    <!--
+        ZIP DOSYASI İNDİRME :
+        - link etiketi (<a></a>) içerisine  .zip  uzantılı dosyaları kaynak olarak koyarız. 
+     -->
+    <a href="other_files/game.zip">Download Game</a><br><br>
+
+
+
+    <!--
+        AYNI SAYFA İÇİNDE TIKLANDIĞINDA İLGİLİ BAŞLIĞA GİTMEK :
+        - başlıklara id değeri vererek link etiketi (<a></a>) içerisinde href kısmına   #id  yazarız. 
+     -->
+    <a href="#chapter1">Chapter-1</a>
+    <a href="#chapter2">Chapter-2</a>
+
+    <h1 id="chapter1">CHAPTER-1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium eaque facere, nam amet labore nostrum. Minus
+        voluptatum molestias, molestiae animi consequatur accusantium eum sed magnam nisi in ad, deleniti rerum nam quia
+        impedit rem eos eligendi dolore sunt? Impedit mollitia non ex sunt eligendi voluptas minima, esse velit? Quod
+        dicta, saepe aliquam quisquam nulla obcaecati itaque fuga corporis. Adipisci veniam ut pariatur tempore velit
+        blanditiis quidem tenetur obcaecati sit reprehenderit, reiciendis, harum voluptatum neque facere commodi
+        voluptas fuga ab numquam, hic ipsa itaque minima. Facere magni a, tempora amet ipsa autem. Numquam dignissimos
+        eveniet libero deleniti officia quisquam nihil voluptatibus.</p>
+
+    <h1 id="chapter2">CHAPTER-2</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ea exercitationem quia molestias iusto odio saepe
+        praesentium doloremque voluptates repudiandae eaque quaerat voluptatum sapiente maiores, quas vero quam nam
+        nulla voluptatibus quis. Dolor nobis, autem in incidunt voluptate neque cum quasi numquam. Facilis, autem
+        nesciunt. Recusandae ducimus itaque reprehenderit numquam voluptates repellendus sit sunt, est, dolore dolor
+        deleniti. Recusandae omnis cupiditate dolores rerum doloribus, dolor harum, fugiat obcaecati temporibus, beatae
+        laudantium aliquid libero facere possimus! Iste, laboriosam totam. Vero totam animi blanditiis consequatur!
+        Itaque nesciunt, esse sit unde quis vitae eveniet amet, ea cupiditate repudiandae alias voluptatibus ipsam
+        perferendis inventore!</p><br><br>
+
+
+
+    <!--
+        LİNK İÇİNE TELEFON NUMARASI KOYMAK :
+        - link etiketi (<a></a>) içerisinde href kısmına   tel  yazılır.
+     -->
+    <a href="tel:1111111111">Iletisim Icin</a>
 </body>
 </html>
