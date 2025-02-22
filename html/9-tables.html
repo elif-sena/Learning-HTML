@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLO OLUŞTURMA</title>
+</head>
+
+<body>
+    <!--
+        TABLO OLUŞTURMA:
+        -  Tablo oluştururken           <table></table>         etiketi kullanılır.   
+        -  her bir satır için           <tr></tr> (table row)   kullanılır.
+        -  her bir sütun için satırda   <td></td> (table data)  kullanılır.
+    -->
+
+    <h1>DERSLER VE KAÇINCI SINIFTA OLDUKLARI</h1>
+    <table border="1">
+        <tr>
+            <td><strong>1. Sinif</strong></td>
+            <td>Matematik-I</td>
+            <td>Bilgisayarin Temelleri</td>
+            <td>Elektrik Devreleri</td>
+        </tr>
+        <tr>
+            <td><strong>2. Sinif</strong></td>
+            <td>Algoritmalar</td>
+            <td>Ayrik Matematik</td>
+            <td>Mühendislik Matematiği</td>
+        </tr>
+        <tr>
+            <td><strong>3. Sinif</strong></td>
+            <td>İşletim Sistemleri</td>
+            <td>Yazilim Mühendisliği</td>
+            <td>Sayisal Analiz</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+
+    <!-- 
+        TABLO BİÇİMLENDİRME:
+        -  <caption></caption>  etiketi tablonun başlığıdır.
+        -  <thead></thead>      tablonun ilk satırıdır.
+        -  <tbody></tbody>      tablonun gövdesi.
+        -  <tfoot></tfoot>      tablonun son satırı.
+    -->
+
+    <table border="1">
+        <caption>ÜLKELER VE NÜFUSLARI</caption>
+        <thead>
+            <tr>
+                <th>Ülke</th> <!-- th kalın yazı stiline sahip-->
+                <th>Nüfus(M)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Türkiye</td>
+                <td>85.33</td>
+            </tr>
+            <tr>
+                <td>Almanya</td>
+                <td>83.28</td>
+            </tr>
+            <tr>
+                <td>İsviçre</td>
+                <td>8.888</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Toplam Nüfus</td>
+                <td>147.498</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <br>
+
+    <!--
+        HÜCRE BİRLEŞTİRME
+        - bunun için  colspan (column)  veya  rowspan  kullanılır.
+        - atanan değer kaç hücre birleştirileceğini belirler.
+    -->
+    <table border="1">
+        <caption>ÜLKELER VE NÜFUSLARI</caption>
+        <thead>
+            <tr>
+                <th>Ülke</th> <!-- th kalın yazı stiline sahip ve metni ortalar-->
+                <th>Nüfus(M)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Türkiye</td>
+                <td>85.33</td>
+            </tr>
+            <tr>
+                <td>Almanya</td>
+                <td>83.28</td>
+            </tr>
+            <tr>
+                <td>İsviçre</td>
+                <td>8.888</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Toplam Nüfus: 147.498</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
