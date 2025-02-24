@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+
+<body>
+    <!-- 
+        FORM
+        - name:   isim vermek için 
+        - action: girilen verilerin hangi sayfaya gönderileceğini belirlemek için
+        - method: verilerin hedef sayfaya gönderilme yöntemini belirlemek için kullanılır. (dialog, get, post)
+            get ->  adres çubuğundan görünür şekilde gönderir
+            post -> gizli şekilde
+        - form elemanı oluşturmak için input tag'ı kullanılır. type özelliği ile türü belirlenir.
+
+        <input type="text">
+        - size:      girilen karakter genişliği.
+        - maxlength: toplam genişliktir.
+        - required:  veri girişi zorunlu tutulur.
+
+        <input type="submit">
+        - Forma girilen bilgileri onaylamak için kullanılır.
+        - value: yazıyı, değeri değiştirmek için kullanılır.
+
+        <input type="reset">
+        - Forma girilen bilgileri onaylamak için 
+    -->
+    <h1>Üye Kayit Formu:</h1>
+    <form name="kayit" action="kayit.php" method="get">
+        Ad: <input type="text" name="ad" id="ad" size="20" maxlength="30" required>
+        Soyad: <input type="text" name="soyad">
+        Web Sitesi: <input type="url" name="url" id="url">
+        <input type="submit">
+    </form>
+    <br>
+
+    <h1>Log in</h1>
+    <form name="login" method="get">
+        Email: <input type="email" name="email" id="email" required>
+        <br>
+        Password: <input type="password" required><br>
+        Remember Me <input type="checkbox">
+        <input type="submit" value="Log in">
+        <input type="reset" value="Cancel">
+    </form>
+    <br>
+
+
+
+    <!-- TABLO İLE FORM HİZALAMA -->
+    <h1>Sign Up</h1>
+    <form name="signup" action="signup.aspx" method="get">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="input_name" required></td>
+            </tr>
+            <tr>
+                <td>Surname:</td>
+                <td><input type="text" name="surname" id="input_surname" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>Male<input type="checkbox"> Female<input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"> <input type="reset" value="Cancel"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
