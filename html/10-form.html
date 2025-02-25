@@ -10,30 +10,43 @@
 <body>
     <!-- 
         FORM
-        - name:   isim vermek için 
         - action: girilen verilerin hangi sayfaya gönderileceğini belirlemek için
         - method: verilerin hedef sayfaya gönderilme yöntemini belirlemek için kullanılır. (dialog, get, post)
             get ->  adres çubuğundan görünür şekilde gönderir
             post -> gizli şekilde
         - form elemanı oluşturmak için input tag'ı kullanılır. type özelliği ile türü belirlenir.
 
-        <input type="text">
-        - size:      girilen karakter genişliği.
-        - maxlength: toplam genişliktir.
-        - required:  veri girişi zorunlu tutulur.
+
+        FORM ELEMANLARININ ORTAK OZELLİKLERİ
+        - name:         isim vermek için
+        - size:         girilen karakter genişliği.
+        - maxlength:    toplam genişliktir.
+        - required:     veri girişi zorunlu tutulur.
+        - autocomplete: forma daha önce girilen verileri kullanarak otomatik doldurma sağlar.
+        - autofocus:    sayfa açıldığında imlecin form elemanını aktif etmesini sağlar.
+        - placeholder:  form elemanına hint koyulmasını sağlar.
+        - disabled:     form elemanını pasif hale getirir.
+        - value:        yazıyı, değeri değiştirmek için kullanılır.
+
 
         <input type="submit">
         - Forma girilen bilgileri onaylamak için kullanılır.
-        - value: yazıyı, değeri değiştirmek için kullanılır.
-
+        
         <input type="reset">
-        - Forma girilen bilgileri onaylamak için 
+        - Forma girilen bilgileri onaylamak için
+
+        <label></label>
+        - form elemanı için bir metin belirtilmesini sağlar
+        - for diyerek hangisi için olduğu yazılır
     -->
     <h1>Üye Kayit Formu:</h1>
     <form name="kayit" action="kayit.php" method="get">
-        Ad: <input type="text" name="ad" id="ad" size="20" maxlength="30" required>
-        Soyad: <input type="text" name="soyad">
-        Web Sitesi: <input type="url" name="url" id="url">
+        <label for="fname">Ad:</label><br>
+        <input type="text" name="fname" id="fname" size="20" maxlength="30" required><br>
+        <label for="lname">Soyad:</label><br>
+        <input type="text" name="lname" id="lname"><br>
+        <label for="url">Web Sitesi:</label><br>
+        <input type="url" name="url" id="url"><br><br>
         <input type="submit">
     </form>
     <br>
@@ -80,6 +93,110 @@
                 <td><input type="submit" value="Submit"> <input type="reset" value="Cancel"></td>
             </tr>
         </table>
+    </form>
+    <br>
+
+
+
+    <!--
+        TEXTAREA kullanımı
+        - daha uzun metinler için kullanılır.
+        - rows: kaç satır metin girileceğini belirler
+        - cols: genişliğini ayarlar
+    -->
+     <h1>FORM OZELLIKLERI</h1>
+     <form autocomplete="on">
+       <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" size="15" required autofocus placeholder="Enter Your Name"></td>
+            </tr>
+            <tr>
+                <td>Surname:</td>
+                <td><input type="text" size="15" maxlength="50" required placeholder="Enter Your Surname" disabled></td>
+            </tr>
+            <tr>
+                <td>Suggestion:</td>
+                <td><textarea name="suggestion" rows="4" cols="15"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit"> <input type="reset"></td>
+            </tr>
+       </table>
+     </form>
+     <br>
+
+
+
+     <!--
+        CHECKBOX
+        - istenilen bilgiler onaylanır
+
+        RADIO
+        - seçenek kutusudur
+        - iki veya daha fazla seçenek arasından sadece biri seçilmek istenilirse kullanılır.
+        - Aynı gruptaki radio'lar ın name özelliği aynı olmalıdır, yoksa aynı anda birden fazla seçim yapılabilir.
+        - checked: yazılı olduğu form elemanını seçili halde gösterir
+    -->
+    <h1>CHECKBOX</h1>
+    <form name="onay">
+        <input type="checkbox" name="checkbox_bulten"> Bültene abone olmak istiyorum.
+        <br><br>
+        <input type="submit" value="Onayla">
+    </form>
+    <br>
+
+    <h1>RADIO</h1>
+    <form name="secenek">
+        <p>Katilmak Istediginiz Spor Dalini Seciniz:</p>
+        <input type="radio" name="spor" value="Futbol"> Futbol
+        <input type="radio" name="spor" value="Basketbol"> Basketbol
+        <input type="radio" name="spor" value="Voleybol"> Voleybol
+        <br><br>  
+        <input type="submit" value="Onayla">
+        <input type="reset" value="Iptal Et">
+
+    </form>
+    <br>
+
+
+
+    <!--
+        COMBOBOX
+        - seçenek listesidir.
+        - seçenek sayısı çok fazla ise kullanılır, ÖR: il seçimi yaptırılacaksa 81 seçenek olması gibi
+        - form etiketi içinde <select></select> etiketleri arasında her bir seçenek için <option></option> tag'ı kullanılır
+        - default olarak en baştaki option seçili görünür.
+        - selected: default bi seçenek seçili olması durumu
+    -->
+    <h1>COMBOBOX</h1>
+    <form>
+        <select name="dogum_yeri" id="combobox_dogum_yeri">
+            <option value="">Ankara</option>
+            <option value="">İstanbul</option>
+            <option value="">Kayseri</option>
+            <option value="" selected>Konya</option>
+            <option value="">Trabzon</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Onayla">
+    </form>
+    <br>
+
+
+
+    <!--
+        RESİM İLE FORM ONAYLAMA
+        - <input type="image" src="">  kullanılır.
+
+    -->
+    <h1>RESİMLİ ONAY FORMU</h1>
+    <form name="onay" action="onay.php" method="get">
+        Ad Soyad: <input type="text" name="isim" id="input_isim">
+        <br>
+        <input type="image" src="../images/ONAYLA.svg" width="200">
     </form>
 </body>
 
